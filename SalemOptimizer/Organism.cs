@@ -51,6 +51,7 @@ namespace SalemOptimizer
 
             // Add the total inspiration cost
             cost.InspirationTotal += state.Inspiration;
+            cost.DiffTotal += state.Diff;
 
             // Add extra cost for incomplete solutions
             foreach (var needed in problem.Proficiencies)

@@ -13,5 +13,6 @@ namespace SalemOptimizer
         public double IncompletenessPenalty;
 
         public double CostTotal;
+        public double DiffTotal;
     }
 }

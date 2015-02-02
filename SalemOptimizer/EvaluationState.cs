@@ -17,6 +17,8 @@ namespace SalemOptimizer
 
             var inspiration = 0;
 
+            Diff += inspirational.Diff;
+
             for (var i = 0; i < givenProficiencies.Length; i++)
             {
                 var val = givenProficiencies[i];
@@ -37,6 +39,8 @@ namespace SalemOptimizer
         }
 
         public int Inspiration { get; set; }
+
+        public int Diff  { get; set; }
 
         public bool IsSupersetOf(EvaluationState state)
         {

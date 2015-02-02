@@ -14,6 +14,16 @@ namespace SalemOptimizer
             this.Uses = uses;
             this.Proficiencies = proficiencies;
             this.Inspiration = proficiencies.Sum();
+            this.Diff = 0;
+        }
+
+        public Inspirational(string name, int uses, int[] proficiencies, int diff)
+        {
+            this.Name = name;
+            this.Uses = uses;
+            this.Proficiencies = proficiencies;
+            this.Inspiration = proficiencies.Sum();
+            this.Diff = diff;
         }
 
         public int Id { get; set; }
@@ -28,5 +38,7 @@ namespace SalemOptimizer
         public int[] Proficiencies;
 
         public int Inspiration { get; private set; }
+
+        public int Diff { get;  set; }
     }
 }

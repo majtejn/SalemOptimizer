@@ -33,9 +33,23 @@
             this.lvInspirationals = new System.Windows.Forms.ListView();
             this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chTotalCost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chDiff = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblInspirationals = new System.Windows.Forms.Label();
             this.grpDesiredProficiencies = new System.Windows.Forms.GroupBox();
             this.tlpProficiencies = new System.Windows.Forms.TableLayoutPanel();
+            this.nudPerenialPhilosophy = new System.Windows.Forms.NumericUpDown();
+            this.nudNaturalPhilosophy = new System.Windows.Forms.NumericUpDown();
+            this.nudThreadAndNeedle = new System.Windows.Forms.NumericUpDown();
+            this.nudSugarAndSpice = new System.Windows.Forms.NumericUpDown();
+            this.nudStocksAndCultivars = new System.Windows.Forms.NumericUpDown();
+            this.nudSparksAndEmbers = new System.Windows.Forms.NumericUpDown();
+            this.nudHerbsAndSprouts = new System.Windows.Forms.NumericUpDown();
+            this.nudMinesAndMountains = new System.Windows.Forms.NumericUpDown();
+            this.nudLawAndLore = new System.Windows.Forms.NumericUpDown();
+            this.nudHuntingAndHideworking = new System.Windows.Forms.NumericUpDown();
+            this.nudHammerAndNail = new System.Windows.Forms.NumericUpDown();
+            this.nudFloraAndFauna = new System.Windows.Forms.NumericUpDown();
+            this.nudCloakAndDagger = new System.Windows.Forms.NumericUpDown();
             this.lblArtsAndCrafts = new System.Windows.Forms.Label();
             this.lblCloakAndDagger = new System.Windows.Forms.Label();
             this.lblFloraAndFauna = new System.Windows.Forms.Label();
@@ -51,33 +65,24 @@
             this.lblNaturalPhilosophy = new System.Windows.Forms.Label();
             this.lblPerenialPhilosophy = new System.Windows.Forms.Label();
             this.btnResetAll = new System.Windows.Forms.Button();
+            this.nudArtsAndCrafts = new System.Windows.Forms.NumericUpDown();
             this.lblFaithAndWisdom = new System.Windows.Forms.Label();
+            this.nudFaithAndWisdom = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.grpSolution = new System.Windows.Forms.GroupBox();
+            this.cbResultCount = new System.Windows.Forms.ComboBox();
+            this.cbxPrune = new System.Windows.Forms.CheckBox();
             this.btnRetryWithBest = new System.Windows.Forms.Button();
             this.lvSolutions = new System.Windows.Forms.ListView();
             this.chOrganism = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chCost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chTotalDiff = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolTipError = new System.Windows.Forms.ToolTip(this.components);
-            this.cbxPrune = new System.Windows.Forms.CheckBox();
-            this.nudPerenialPhilosophy = new System.Windows.Forms.NumericUpDown();
-            this.nudNaturalPhilosophy = new System.Windows.Forms.NumericUpDown();
-            this.nudThreadAndNeedle = new System.Windows.Forms.NumericUpDown();
-            this.nudSugarAndSpice = new System.Windows.Forms.NumericUpDown();
-            this.nudStocksAndCultivars = new System.Windows.Forms.NumericUpDown();
-            this.nudSparksAndEmbers = new System.Windows.Forms.NumericUpDown();
-            this.nudHerbsAndSprouts = new System.Windows.Forms.NumericUpDown();
-            this.nudMinesAndMountains = new System.Windows.Forms.NumericUpDown();
-            this.nudLawAndLore = new System.Windows.Forms.NumericUpDown();
-            this.nudHuntingAndHideworking = new System.Windows.Forms.NumericUpDown();
-            this.nudHammerAndNail = new System.Windows.Forms.NumericUpDown();
-            this.nudFloraAndFauna = new System.Windows.Forms.NumericUpDown();
-            this.nudCloakAndDagger = new System.Windows.Forms.NumericUpDown();
-            this.nudArtsAndCrafts = new System.Windows.Forms.NumericUpDown();
-            this.nudFaithAndWisdom = new System.Windows.Forms.NumericUpDown();
+            this.cbUseAll = new System.Windows.Forms.CheckBox();
+            this.combSkill = new System.Windows.Forms.ComboBox();
             this.grpDesiredProficiencies.SuspendLayout();
             this.tlpProficiencies.SuspendLayout();
-            this.grpSolution.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPerenialPhilosophy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNaturalPhilosophy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudThreadAndNeedle)).BeginInit();
@@ -93,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudCloakAndDagger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudArtsAndCrafts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFaithAndWisdom)).BeginInit();
+            this.grpSolution.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFindSolution
@@ -114,12 +120,14 @@
             this.lvInspirationals.CheckBoxes = true;
             this.lvInspirationals.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chName,
-            this.chTotalCost});
+            this.chTotalCost,
+            this.chDiff});
             this.lvInspirationals.FullRowSelect = true;
+            this.lvInspirationals.LabelEdit = true;
             this.lvInspirationals.Location = new System.Drawing.Point(12, 25);
             this.lvInspirationals.Name = "lvInspirationals";
             this.lvInspirationals.ShowGroups = false;
-            this.lvInspirationals.Size = new System.Drawing.Size(399, 208);
+            this.lvInspirationals.Size = new System.Drawing.Size(527, 208);
             this.lvInspirationals.TabIndex = 2;
             this.lvInspirationals.UseCompatibleStateImageBehavior = false;
             this.lvInspirationals.View = System.Windows.Forms.View.Details;
@@ -136,6 +144,11 @@
             this.chTotalCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.chTotalCost.Width = 70;
             // 
+            // chDiff
+            // 
+            this.chDiff.Text = "Difficulty";
+            this.chDiff.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // lblInspirationals
             // 
             this.lblInspirationals.AutoSize = true;
@@ -150,7 +163,7 @@
             this.grpDesiredProficiencies.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpDesiredProficiencies.Controls.Add(this.tlpProficiencies);
-            this.grpDesiredProficiencies.Location = new System.Drawing.Point(417, 12);
+            this.grpDesiredProficiencies.Location = new System.Drawing.Point(545, 12);
             this.grpDesiredProficiencies.Name = "grpDesiredProficiencies";
             this.grpDesiredProficiencies.Size = new System.Drawing.Size(235, 438);
             this.grpDesiredProficiencies.TabIndex = 4;
@@ -193,6 +206,7 @@
             this.tlpProficiencies.Controls.Add(this.nudArtsAndCrafts, 1, 0);
             this.tlpProficiencies.Controls.Add(this.lblFaithAndWisdom, 0, 2);
             this.tlpProficiencies.Controls.Add(this.nudFaithAndWisdom, 1, 2);
+            this.tlpProficiencies.Controls.Add(this.combSkill, 0, 15);
             this.tlpProficiencies.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpProficiencies.Location = new System.Drawing.Point(3, 16);
             this.tlpProficiencies.Name = "tlpProficiencies";
@@ -215,6 +229,279 @@
             this.tlpProficiencies.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tlpProficiencies.Size = new System.Drawing.Size(229, 419);
             this.tlpProficiencies.TabIndex = 0;
+            // 
+            // nudPerenialPhilosophy
+            // 
+            this.nudPerenialPhilosophy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudPerenialPhilosophy.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "PerenialPhilosophy", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudPerenialPhilosophy.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudPerenialPhilosophy.Location = new System.Drawing.Point(143, 367);
+            this.nudPerenialPhilosophy.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudPerenialPhilosophy.Name = "nudPerenialPhilosophy";
+            this.nudPerenialPhilosophy.Size = new System.Drawing.Size(83, 20);
+            this.nudPerenialPhilosophy.TabIndex = 30;
+            this.nudPerenialPhilosophy.ThousandsSeparator = true;
+            this.nudPerenialPhilosophy.Value = global::SalemOptimizer.Properties.Settings.Default.PerenialPhilosophy;
+            // 
+            // nudNaturalPhilosophy
+            // 
+            this.nudNaturalPhilosophy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudNaturalPhilosophy.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "NaturalPhilosophy", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudNaturalPhilosophy.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudNaturalPhilosophy.Location = new System.Drawing.Point(143, 341);
+            this.nudNaturalPhilosophy.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudNaturalPhilosophy.Name = "nudNaturalPhilosophy";
+            this.nudNaturalPhilosophy.Size = new System.Drawing.Size(83, 20);
+            this.nudNaturalPhilosophy.TabIndex = 29;
+            this.nudNaturalPhilosophy.ThousandsSeparator = true;
+            this.nudNaturalPhilosophy.Value = global::SalemOptimizer.Properties.Settings.Default.NaturalPhilosophy;
+            // 
+            // nudThreadAndNeedle
+            // 
+            this.nudThreadAndNeedle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudThreadAndNeedle.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "ThreadAndNeedle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudThreadAndNeedle.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudThreadAndNeedle.Location = new System.Drawing.Point(143, 315);
+            this.nudThreadAndNeedle.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudThreadAndNeedle.Name = "nudThreadAndNeedle";
+            this.nudThreadAndNeedle.Size = new System.Drawing.Size(83, 20);
+            this.nudThreadAndNeedle.TabIndex = 28;
+            this.nudThreadAndNeedle.ThousandsSeparator = true;
+            this.nudThreadAndNeedle.Value = global::SalemOptimizer.Properties.Settings.Default.ThreadAndNeedle;
+            // 
+            // nudSugarAndSpice
+            // 
+            this.nudSugarAndSpice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudSugarAndSpice.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "SugarAndSpice", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudSugarAndSpice.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudSugarAndSpice.Location = new System.Drawing.Point(143, 289);
+            this.nudSugarAndSpice.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudSugarAndSpice.Name = "nudSugarAndSpice";
+            this.nudSugarAndSpice.Size = new System.Drawing.Size(83, 20);
+            this.nudSugarAndSpice.TabIndex = 27;
+            this.nudSugarAndSpice.ThousandsSeparator = true;
+            this.nudSugarAndSpice.Value = global::SalemOptimizer.Properties.Settings.Default.SugarAndSpice;
+            // 
+            // nudStocksAndCultivars
+            // 
+            this.nudStocksAndCultivars.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudStocksAndCultivars.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "StocksAndCultivars", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudStocksAndCultivars.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudStocksAndCultivars.Location = new System.Drawing.Point(143, 263);
+            this.nudStocksAndCultivars.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudStocksAndCultivars.Name = "nudStocksAndCultivars";
+            this.nudStocksAndCultivars.Size = new System.Drawing.Size(83, 20);
+            this.nudStocksAndCultivars.TabIndex = 26;
+            this.nudStocksAndCultivars.ThousandsSeparator = true;
+            this.nudStocksAndCultivars.Value = global::SalemOptimizer.Properties.Settings.Default.StocksAndCultivars;
+            // 
+            // nudSparksAndEmbers
+            // 
+            this.nudSparksAndEmbers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudSparksAndEmbers.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "SparksAndEmbers", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudSparksAndEmbers.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudSparksAndEmbers.Location = new System.Drawing.Point(143, 237);
+            this.nudSparksAndEmbers.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudSparksAndEmbers.Name = "nudSparksAndEmbers";
+            this.nudSparksAndEmbers.Size = new System.Drawing.Size(83, 20);
+            this.nudSparksAndEmbers.TabIndex = 25;
+            this.nudSparksAndEmbers.ThousandsSeparator = true;
+            this.nudSparksAndEmbers.Value = global::SalemOptimizer.Properties.Settings.Default.SparksAndEmbers;
+            // 
+            // nudHerbsAndSprouts
+            // 
+            this.nudHerbsAndSprouts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudHerbsAndSprouts.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "HerbsAndSprouts", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudHerbsAndSprouts.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudHerbsAndSprouts.Location = new System.Drawing.Point(143, 211);
+            this.nudHerbsAndSprouts.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudHerbsAndSprouts.Name = "nudHerbsAndSprouts";
+            this.nudHerbsAndSprouts.Size = new System.Drawing.Size(83, 20);
+            this.nudHerbsAndSprouts.TabIndex = 24;
+            this.nudHerbsAndSprouts.ThousandsSeparator = true;
+            this.nudHerbsAndSprouts.Value = global::SalemOptimizer.Properties.Settings.Default.HerbsAndSprouts;
+            // 
+            // nudMinesAndMountains
+            // 
+            this.nudMinesAndMountains.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudMinesAndMountains.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "MinesAndMountains", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudMinesAndMountains.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudMinesAndMountains.Location = new System.Drawing.Point(143, 185);
+            this.nudMinesAndMountains.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudMinesAndMountains.Name = "nudMinesAndMountains";
+            this.nudMinesAndMountains.Size = new System.Drawing.Size(83, 20);
+            this.nudMinesAndMountains.TabIndex = 23;
+            this.nudMinesAndMountains.ThousandsSeparator = true;
+            this.nudMinesAndMountains.Value = global::SalemOptimizer.Properties.Settings.Default.MinesAndMountains;
+            // 
+            // nudLawAndLore
+            // 
+            this.nudLawAndLore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudLawAndLore.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "LawAndLore", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudLawAndLore.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudLawAndLore.Location = new System.Drawing.Point(143, 159);
+            this.nudLawAndLore.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudLawAndLore.Name = "nudLawAndLore";
+            this.nudLawAndLore.Size = new System.Drawing.Size(83, 20);
+            this.nudLawAndLore.TabIndex = 22;
+            this.nudLawAndLore.ThousandsSeparator = true;
+            this.nudLawAndLore.Value = global::SalemOptimizer.Properties.Settings.Default.LawAndLore;
+            // 
+            // nudHuntingAndHideworking
+            // 
+            this.nudHuntingAndHideworking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudHuntingAndHideworking.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "HuntingAndHideworking", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudHuntingAndHideworking.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudHuntingAndHideworking.Location = new System.Drawing.Point(143, 133);
+            this.nudHuntingAndHideworking.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudHuntingAndHideworking.Name = "nudHuntingAndHideworking";
+            this.nudHuntingAndHideworking.Size = new System.Drawing.Size(83, 20);
+            this.nudHuntingAndHideworking.TabIndex = 21;
+            this.nudHuntingAndHideworking.ThousandsSeparator = true;
+            this.nudHuntingAndHideworking.Value = global::SalemOptimizer.Properties.Settings.Default.HuntingAndHideworking;
+            // 
+            // nudHammerAndNail
+            // 
+            this.nudHammerAndNail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudHammerAndNail.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "HammerAndNail", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudHammerAndNail.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudHammerAndNail.Location = new System.Drawing.Point(143, 107);
+            this.nudHammerAndNail.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudHammerAndNail.Name = "nudHammerAndNail";
+            this.nudHammerAndNail.Size = new System.Drawing.Size(83, 20);
+            this.nudHammerAndNail.TabIndex = 20;
+            this.nudHammerAndNail.ThousandsSeparator = true;
+            this.nudHammerAndNail.Value = global::SalemOptimizer.Properties.Settings.Default.HammerAndNail;
+            // 
+            // nudFloraAndFauna
+            // 
+            this.nudFloraAndFauna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudFloraAndFauna.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "FloraAndFauna", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudFloraAndFauna.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudFloraAndFauna.Location = new System.Drawing.Point(143, 81);
+            this.nudFloraAndFauna.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudFloraAndFauna.Name = "nudFloraAndFauna";
+            this.nudFloraAndFauna.Size = new System.Drawing.Size(83, 20);
+            this.nudFloraAndFauna.TabIndex = 19;
+            this.nudFloraAndFauna.ThousandsSeparator = true;
+            this.nudFloraAndFauna.Value = global::SalemOptimizer.Properties.Settings.Default.FloraAndFauna;
+            // 
+            // nudCloakAndDagger
+            // 
+            this.nudCloakAndDagger.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudCloakAndDagger.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "CloakAndDagger", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudCloakAndDagger.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudCloakAndDagger.Location = new System.Drawing.Point(143, 29);
+            this.nudCloakAndDagger.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudCloakAndDagger.Name = "nudCloakAndDagger";
+            this.nudCloakAndDagger.Size = new System.Drawing.Size(83, 20);
+            this.nudCloakAndDagger.TabIndex = 17;
+            this.nudCloakAndDagger.ThousandsSeparator = true;
+            this.nudCloakAndDagger.Value = global::SalemOptimizer.Properties.Settings.Default.CloakAndDagger;
             // 
             // lblArtsAndCrafts
             // 
@@ -368,6 +655,27 @@
             this.btnResetAll.UseVisualStyleBackColor = true;
             this.btnResetAll.Click += new System.EventHandler(this.btnResetAll_Click);
             // 
+            // nudArtsAndCrafts
+            // 
+            this.nudArtsAndCrafts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudArtsAndCrafts.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "ArtsAndCrafts", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudArtsAndCrafts.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudArtsAndCrafts.Location = new System.Drawing.Point(143, 3);
+            this.nudArtsAndCrafts.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudArtsAndCrafts.Name = "nudArtsAndCrafts";
+            this.nudArtsAndCrafts.Size = new System.Drawing.Size(83, 20);
+            this.nudArtsAndCrafts.TabIndex = 16;
+            this.nudArtsAndCrafts.ThousandsSeparator = true;
+            this.nudArtsAndCrafts.Value = global::SalemOptimizer.Properties.Settings.Default.ArtsAndCrafts;
+            // 
             // lblFaithAndWisdom
             // 
             this.lblFaithAndWisdom.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -377,6 +685,38 @@
             this.lblFaithAndWisdom.Size = new System.Drawing.Size(92, 13);
             this.lblFaithAndWisdom.TabIndex = 2;
             this.lblFaithAndWisdom.Text = "Faith and Wisdom";
+            // 
+            // nudFaithAndWisdom
+            // 
+            this.nudFaithAndWisdom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudFaithAndWisdom.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "FaithAndWisdom", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.nudFaithAndWisdom.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.nudFaithAndWisdom.Location = new System.Drawing.Point(143, 55);
+            this.nudFaithAndWisdom.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudFaithAndWisdom.Name = "nudFaithAndWisdom";
+            this.nudFaithAndWisdom.Size = new System.Drawing.Size(83, 20);
+            this.nudFaithAndWisdom.TabIndex = 18;
+            this.nudFaithAndWisdom.ThousandsSeparator = true;
+            this.nudFaithAndWisdom.Value = global::SalemOptimizer.Properties.Settings.Default.FaithAndWisdom;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(404, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 23);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Edit Difficulties";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnStop
             // 
@@ -393,17 +733,44 @@
             // 
             this.grpSolution.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpSolution.Controls.Add(this.cbResultCount);
             this.grpSolution.Controls.Add(this.cbxPrune);
             this.grpSolution.Controls.Add(this.btnRetryWithBest);
             this.grpSolution.Controls.Add(this.lvSolutions);
             this.grpSolution.Controls.Add(this.btnFindSolution);
             this.grpSolution.Controls.Add(this.btnStop);
+            this.grpSolution.Controls.Add(this.button1);
             this.grpSolution.Location = new System.Drawing.Point(12, 242);
             this.grpSolution.Name = "grpSolution";
-            this.grpSolution.Size = new System.Drawing.Size(399, 208);
+            this.grpSolution.Size = new System.Drawing.Size(527, 208);
             this.grpSolution.TabIndex = 6;
             this.grpSolution.TabStop = false;
             this.grpSolution.Text = "Solution";
+            // 
+            // cbResultCount
+            // 
+            this.cbResultCount.FormattingEnabled = true;
+            this.cbResultCount.Items.AddRange(new object[] {
+            "5",
+            "10",
+            "20",
+            "50"});
+            this.cbResultCount.Location = new System.Drawing.Point(356, 21);
+            this.cbResultCount.Name = "cbResultCount";
+            this.cbResultCount.Size = new System.Drawing.Size(46, 21);
+            this.cbResultCount.TabIndex = 9;
+            // 
+            // cbxPrune
+            // 
+            this.cbxPrune.AutoSize = true;
+            this.cbxPrune.Checked = global::SalemOptimizer.Properties.Settings.Default.LeaderboardPruning;
+            this.cbxPrune.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::SalemOptimizer.Properties.Settings.Default, "LeaderboardPruning", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cbxPrune.Location = new System.Drawing.Point(226, 23);
+            this.cbxPrune.Name = "cbxPrune";
+            this.cbxPrune.Size = new System.Drawing.Size(124, 17);
+            this.cbxPrune.TabIndex = 8;
+            this.cbxPrune.Text = "Leaderboard pruning";
+            this.cbxPrune.UseVisualStyleBackColor = true;
             // 
             // btnRetryWithBest
             // 
@@ -424,10 +791,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lvSolutions.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chOrganism,
-            this.chCost});
+            this.chCost,
+            this.chTotalDiff});
             this.lvSolutions.Location = new System.Drawing.Point(6, 48);
             this.lvSolutions.Name = "lvSolutions";
-            this.lvSolutions.Size = new System.Drawing.Size(387, 154);
+            this.lvSolutions.Size = new System.Drawing.Size(515, 154);
             this.lvSolutions.TabIndex = 6;
             this.lvSolutions.UseCompatibleStateImageBehavior = false;
             this.lvSolutions.View = System.Windows.Forms.View.Details;
@@ -444,6 +812,12 @@
             this.chCost.Text = "Cost";
             this.chCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // chTotalDiff
+            // 
+            this.chTotalDiff.Text = "Total difficulty";
+            this.chTotalDiff.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.chTotalDiff.Width = 82;
+            // 
             // toolTipError
             // 
             this.toolTipError.AutomaticDelay = 100;
@@ -452,338 +826,36 @@
             this.toolTipError.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Error;
             this.toolTipError.ToolTipTitle = "Error";
             // 
-            // cbxPrune
+            // cbUseAll
             // 
-            this.cbxPrune.AutoSize = true;
-            this.cbxPrune.Checked = global::SalemOptimizer.Properties.Settings.Default.LeaderboardPruning;
-            this.cbxPrune.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::SalemOptimizer.Properties.Settings.Default, "LeaderboardPruning", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cbxPrune.Location = new System.Drawing.Point(226, 23);
-            this.cbxPrune.Name = "cbxPrune";
-            this.cbxPrune.Size = new System.Drawing.Size(124, 17);
-            this.cbxPrune.TabIndex = 8;
-            this.cbxPrune.Text = "Leaderboard pruning";
-            this.cbxPrune.UseVisualStyleBackColor = true;
+            this.cbUseAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbUseAll.AutoSize = true;
+            this.cbUseAll.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbUseAll.Location = new System.Drawing.Point(478, 8);
+            this.cbUseAll.Name = "cbUseAll";
+            this.cbUseAll.Size = new System.Drawing.Size(61, 17);
+            this.cbUseAll.TabIndex = 7;
+            this.cbUseAll.Text = "Use all ";
+            this.cbUseAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbUseAll.UseVisualStyleBackColor = true;
             // 
-            // nudPerenialPhilosophy
+            // combSkill
             // 
-            this.nudPerenialPhilosophy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudPerenialPhilosophy.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "PerenialPhilosophy", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudPerenialPhilosophy.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudPerenialPhilosophy.Location = new System.Drawing.Point(143, 367);
-            this.nudPerenialPhilosophy.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudPerenialPhilosophy.Name = "nudPerenialPhilosophy";
-            this.nudPerenialPhilosophy.Size = new System.Drawing.Size(83, 20);
-            this.nudPerenialPhilosophy.TabIndex = 30;
-            this.nudPerenialPhilosophy.ThousandsSeparator = true;
-            this.nudPerenialPhilosophy.Value = global::SalemOptimizer.Properties.Settings.Default.PerenialPhilosophy;
-            // 
-            // nudNaturalPhilosophy
-            // 
-            this.nudNaturalPhilosophy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudNaturalPhilosophy.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "NaturalPhilosophy", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudNaturalPhilosophy.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudNaturalPhilosophy.Location = new System.Drawing.Point(143, 341);
-            this.nudNaturalPhilosophy.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudNaturalPhilosophy.Name = "nudNaturalPhilosophy";
-            this.nudNaturalPhilosophy.Size = new System.Drawing.Size(83, 20);
-            this.nudNaturalPhilosophy.TabIndex = 29;
-            this.nudNaturalPhilosophy.ThousandsSeparator = true;
-            this.nudNaturalPhilosophy.Value = global::SalemOptimizer.Properties.Settings.Default.NaturalPhilosophy;
-            // 
-            // nudThreadAndNeedle
-            // 
-            this.nudThreadAndNeedle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudThreadAndNeedle.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "ThreadAndNeedle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudThreadAndNeedle.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudThreadAndNeedle.Location = new System.Drawing.Point(143, 315);
-            this.nudThreadAndNeedle.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudThreadAndNeedle.Name = "nudThreadAndNeedle";
-            this.nudThreadAndNeedle.Size = new System.Drawing.Size(83, 20);
-            this.nudThreadAndNeedle.TabIndex = 28;
-            this.nudThreadAndNeedle.ThousandsSeparator = true;
-            this.nudThreadAndNeedle.Value = global::SalemOptimizer.Properties.Settings.Default.ThreadAndNeedle;
-            // 
-            // nudSugarAndSpice
-            // 
-            this.nudSugarAndSpice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudSugarAndSpice.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "SugarAndSpice", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudSugarAndSpice.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudSugarAndSpice.Location = new System.Drawing.Point(143, 289);
-            this.nudSugarAndSpice.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudSugarAndSpice.Name = "nudSugarAndSpice";
-            this.nudSugarAndSpice.Size = new System.Drawing.Size(83, 20);
-            this.nudSugarAndSpice.TabIndex = 27;
-            this.nudSugarAndSpice.ThousandsSeparator = true;
-            this.nudSugarAndSpice.Value = global::SalemOptimizer.Properties.Settings.Default.SugarAndSpice;
-            // 
-            // nudStocksAndCultivars
-            // 
-            this.nudStocksAndCultivars.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudStocksAndCultivars.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "StocksAndCultivars", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudStocksAndCultivars.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudStocksAndCultivars.Location = new System.Drawing.Point(143, 263);
-            this.nudStocksAndCultivars.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudStocksAndCultivars.Name = "nudStocksAndCultivars";
-            this.nudStocksAndCultivars.Size = new System.Drawing.Size(83, 20);
-            this.nudStocksAndCultivars.TabIndex = 26;
-            this.nudStocksAndCultivars.ThousandsSeparator = true;
-            this.nudStocksAndCultivars.Value = global::SalemOptimizer.Properties.Settings.Default.StocksAndCultivars;
-            // 
-            // nudSparksAndEmbers
-            // 
-            this.nudSparksAndEmbers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudSparksAndEmbers.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "SparksAndEmbers", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudSparksAndEmbers.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudSparksAndEmbers.Location = new System.Drawing.Point(143, 237);
-            this.nudSparksAndEmbers.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudSparksAndEmbers.Name = "nudSparksAndEmbers";
-            this.nudSparksAndEmbers.Size = new System.Drawing.Size(83, 20);
-            this.nudSparksAndEmbers.TabIndex = 25;
-            this.nudSparksAndEmbers.ThousandsSeparator = true;
-            this.nudSparksAndEmbers.Value = global::SalemOptimizer.Properties.Settings.Default.SparksAndEmbers;
-            // 
-            // nudHerbsAndSprouts
-            // 
-            this.nudHerbsAndSprouts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudHerbsAndSprouts.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "HerbsAndSprouts", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudHerbsAndSprouts.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudHerbsAndSprouts.Location = new System.Drawing.Point(143, 211);
-            this.nudHerbsAndSprouts.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudHerbsAndSprouts.Name = "nudHerbsAndSprouts";
-            this.nudHerbsAndSprouts.Size = new System.Drawing.Size(83, 20);
-            this.nudHerbsAndSprouts.TabIndex = 24;
-            this.nudHerbsAndSprouts.ThousandsSeparator = true;
-            this.nudHerbsAndSprouts.Value = global::SalemOptimizer.Properties.Settings.Default.HerbsAndSprouts;
-            // 
-            // nudMinesAndMountains
-            // 
-            this.nudMinesAndMountains.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudMinesAndMountains.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "MinesAndMountains", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudMinesAndMountains.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudMinesAndMountains.Location = new System.Drawing.Point(143, 185);
-            this.nudMinesAndMountains.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudMinesAndMountains.Name = "nudMinesAndMountains";
-            this.nudMinesAndMountains.Size = new System.Drawing.Size(83, 20);
-            this.nudMinesAndMountains.TabIndex = 23;
-            this.nudMinesAndMountains.ThousandsSeparator = true;
-            this.nudMinesAndMountains.Value = global::SalemOptimizer.Properties.Settings.Default.MinesAndMountains;
-            // 
-            // nudLawAndLore
-            // 
-            this.nudLawAndLore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudLawAndLore.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "LawAndLore", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudLawAndLore.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudLawAndLore.Location = new System.Drawing.Point(143, 159);
-            this.nudLawAndLore.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudLawAndLore.Name = "nudLawAndLore";
-            this.nudLawAndLore.Size = new System.Drawing.Size(83, 20);
-            this.nudLawAndLore.TabIndex = 22;
-            this.nudLawAndLore.ThousandsSeparator = true;
-            this.nudLawAndLore.Value = global::SalemOptimizer.Properties.Settings.Default.LawAndLore;
-            // 
-            // nudHuntingAndHideworking
-            // 
-            this.nudHuntingAndHideworking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudHuntingAndHideworking.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "HuntingAndHideworking", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudHuntingAndHideworking.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudHuntingAndHideworking.Location = new System.Drawing.Point(143, 133);
-            this.nudHuntingAndHideworking.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudHuntingAndHideworking.Name = "nudHuntingAndHideworking";
-            this.nudHuntingAndHideworking.Size = new System.Drawing.Size(83, 20);
-            this.nudHuntingAndHideworking.TabIndex = 21;
-            this.nudHuntingAndHideworking.ThousandsSeparator = true;
-            this.nudHuntingAndHideworking.Value = global::SalemOptimizer.Properties.Settings.Default.HuntingAndHideworking;
-            // 
-            // nudHammerAndNail
-            // 
-            this.nudHammerAndNail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudHammerAndNail.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "HammerAndNail", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudHammerAndNail.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudHammerAndNail.Location = new System.Drawing.Point(143, 107);
-            this.nudHammerAndNail.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudHammerAndNail.Name = "nudHammerAndNail";
-            this.nudHammerAndNail.Size = new System.Drawing.Size(83, 20);
-            this.nudHammerAndNail.TabIndex = 20;
-            this.nudHammerAndNail.ThousandsSeparator = true;
-            this.nudHammerAndNail.Value = global::SalemOptimizer.Properties.Settings.Default.HammerAndNail;
-            // 
-            // nudFloraAndFauna
-            // 
-            this.nudFloraAndFauna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudFloraAndFauna.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "FloraAndFauna", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudFloraAndFauna.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudFloraAndFauna.Location = new System.Drawing.Point(143, 81);
-            this.nudFloraAndFauna.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudFloraAndFauna.Name = "nudFloraAndFauna";
-            this.nudFloraAndFauna.Size = new System.Drawing.Size(83, 20);
-            this.nudFloraAndFauna.TabIndex = 19;
-            this.nudFloraAndFauna.ThousandsSeparator = true;
-            this.nudFloraAndFauna.Value = global::SalemOptimizer.Properties.Settings.Default.FloraAndFauna;
-            // 
-            // nudCloakAndDagger
-            // 
-            this.nudCloakAndDagger.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudCloakAndDagger.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "CloakAndDagger", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudCloakAndDagger.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudCloakAndDagger.Location = new System.Drawing.Point(143, 29);
-            this.nudCloakAndDagger.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudCloakAndDagger.Name = "nudCloakAndDagger";
-            this.nudCloakAndDagger.Size = new System.Drawing.Size(83, 20);
-            this.nudCloakAndDagger.TabIndex = 17;
-            this.nudCloakAndDagger.ThousandsSeparator = true;
-            this.nudCloakAndDagger.Value = global::SalemOptimizer.Properties.Settings.Default.CloakAndDagger;
-            // 
-            // nudArtsAndCrafts
-            // 
-            this.nudArtsAndCrafts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudArtsAndCrafts.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "ArtsAndCrafts", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudArtsAndCrafts.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudArtsAndCrafts.Location = new System.Drawing.Point(143, 3);
-            this.nudArtsAndCrafts.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudArtsAndCrafts.Name = "nudArtsAndCrafts";
-            this.nudArtsAndCrafts.Size = new System.Drawing.Size(83, 20);
-            this.nudArtsAndCrafts.TabIndex = 16;
-            this.nudArtsAndCrafts.ThousandsSeparator = true;
-            this.nudArtsAndCrafts.Value = global::SalemOptimizer.Properties.Settings.Default.ArtsAndCrafts;
-            // 
-            // nudFaithAndWisdom
-            // 
-            this.nudFaithAndWisdom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudFaithAndWisdom.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::SalemOptimizer.Properties.Settings.Default, "FaithAndWisdom", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.nudFaithAndWisdom.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudFaithAndWisdom.Location = new System.Drawing.Point(143, 55);
-            this.nudFaithAndWisdom.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.nudFaithAndWisdom.Name = "nudFaithAndWisdom";
-            this.nudFaithAndWisdom.Size = new System.Drawing.Size(83, 20);
-            this.nudFaithAndWisdom.TabIndex = 18;
-            this.nudFaithAndWisdom.ThousandsSeparator = true;
-            this.nudFaithAndWisdom.Value = global::SalemOptimizer.Properties.Settings.Default.FaithAndWisdom;
+            this.combSkill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.combSkill.FormattingEnabled = true;
+            this.combSkill.Location = new System.Drawing.Point(3, 393);
+            this.combSkill.Name = "combSkill";
+            this.combSkill.Size = new System.Drawing.Size(134, 21);
+            this.combSkill.TabIndex = 31;
+            this.combSkill.Text = "Choose skill";
+            this.combSkill.SelectedIndexChanged += new System.EventHandler(this.combSkill_SelectedIndexChanged);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 462);
+            this.ClientSize = new System.Drawing.Size(792, 462);
+            this.Controls.Add(this.cbUseAll);
             this.Controls.Add(this.grpSolution);
             this.Controls.Add(this.grpDesiredProficiencies);
             this.Controls.Add(this.lblInspirationals);
@@ -796,8 +868,6 @@
             this.grpDesiredProficiencies.ResumeLayout(false);
             this.tlpProficiencies.ResumeLayout(false);
             this.tlpProficiencies.PerformLayout();
-            this.grpSolution.ResumeLayout(false);
-            this.grpSolution.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPerenialPhilosophy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNaturalPhilosophy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudThreadAndNeedle)).EndInit();
@@ -813,6 +883,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudCloakAndDagger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudArtsAndCrafts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFaithAndWisdom)).EndInit();
+            this.grpSolution.ResumeLayout(false);
+            this.grpSolution.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -866,6 +938,12 @@
         private System.Windows.Forms.ToolTip toolTipError;
         private System.Windows.Forms.Button btnRetryWithBest;
         private System.Windows.Forms.CheckBox cbxPrune;
+        private System.Windows.Forms.ColumnHeader chDiff;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColumnHeader chTotalDiff;
+        private System.Windows.Forms.ComboBox cbResultCount;
+        private System.Windows.Forms.CheckBox cbUseAll;
+        private System.Windows.Forms.ComboBox combSkill;
     }
 }
 
